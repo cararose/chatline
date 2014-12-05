@@ -7,13 +7,10 @@ def incoming_call():
     twiml = '''
             <?xml version="1.0" encoding="UTF-8"?>
             <Response>
-                <Say voice="woman">Please leave a message after the tone.</Say>
-                <Record maxLength="20" />
+                <Gather timeout="10" finishOnKey="*">
+                    <Say>Please enter your pin number and then press star.</Say>
+                </Gather>
             </Response>
             '''
 
     return twiml
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
