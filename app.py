@@ -6,9 +6,7 @@ def incoming_call():
     # This handles the incoming calls
     twiml = '''<?xml version="1.0" encoding="UTF-8"?>
                 <Response>
-                    <Gather timeout="10" finishOnKey="*">
-                        <Say>Please enter your pin number and then press star.</Say>
-                    </Gather>
+                    <Say>Hello. You have reached a robot. Don't worry, I'm a singing robot, not a stabbing robot.</Say>
                 </Response>
             '''
 
